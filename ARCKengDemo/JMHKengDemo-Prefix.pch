@@ -1,0 +1,25 @@
+//
+//  JMHKengDemo-Prefix.pch
+//  ARCKengDemo
+//
+//  Created by juanmao on 14/12/8.
+//  Copyright (c) 2014年 juanmao. All rights reserved.
+//
+
+#ifndef ARCKengDemo_JMHKengDemo_Prefix_pch
+#define ARCKengDemo_JMHKengDemo_Prefix_pch
+
+#ifdef __OBJC__
+
+#define LogFunctionNameAndFileName NSLog(@"%@, %@", [NSString stringWithUTF8String:__FILE__], NSStringFromSelector(_cmd));
+#define LogFunctionNameAndClassName NSLog(@"%@ ========= %@", [self class], NSStringFromSelector(_cmd));
+
+#if __has_feature(objc_arc)
+#define WXGWeak __weak
+#else
+#define WXGWeak
+#endif
+
+#endif
+
+#endif
